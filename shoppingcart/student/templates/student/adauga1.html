@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addstudent</title>
+</head>
+<body>
+<h1>Adauga student:</h1>
+
+<form action="/student/add/" method="POST">{% csrf_token %}
+<table>
+
+    <tr>
+        <td> <b>Nume:</b></td><td><input type="text" name="nume" id="nume" > </td>
+    </tr>
+    <tr>
+         <td><b>Telefon:</b></td><td><input type="text" name="telefon" id="telefon"> </td>
+    </tr>
+    <tr>
+
+         <td> <b>Bursa:</b></td><td><input type="text" name="bursa" id="bursa" value="0"> </td>
+    </tr>
+    <tr>
+         <td> <b>Localitate:</b></td><td><input type="text" name="localitate" id="localitate" > </td>
+    </tr>
+    <tr>
+        <td><input type ="submit" name="adauga" value="Adauga"></td>
+    </tr>
+
+
+</table>
+
+</form>
+</body>
+</html>

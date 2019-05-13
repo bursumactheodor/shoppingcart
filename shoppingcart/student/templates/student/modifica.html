@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>updstudent</title>
+</head>
+<body>
+<h1>Modifica student:</h1>
+<h1>{{ms}}</h1> <br>
+<h1>{{stud.nume}}</h1>
+
+
+
+  {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+ <form action="" method="post" novalidate>
+        <table>
+            {{ form.as_table }}
+        </table>
+        {% csrf_token %}
+        <input type ="submit" name="modifica" value="Modifica">
+
+ </form>
+</body>
+</html>

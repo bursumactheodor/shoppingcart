@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>studenti</title>
+</head>
+<body>
+<h1> Lista studenti</h1>
+
+<a href="add/">Adauga</a>
+<table>
+    <tr>
+        <th>Id</th>
+         <th>Nume</th>
+         <th>Telefon</th>
+         <th>Bursa</th>
+         <th>Localitate</th>
+         <th></th>
+         <th></th>
+    </tr>
+
+{% for stud in lst %}
+    <tr>
+        <td>{{stud.id}}</td>
+        <td>{{stud.nume}}</td>
+        <td>{{stud.telefon}}</td>
+        <td>{{stud.bursa}}</td>
+        <td>{{stud.localitate}}</td>
+        <td><a href="mod/{{stud.id}}">Modifica</a></td>
+        <td><a href="del/{{stud.id}}">Sterge</a></td>
+
+    </tr>
+{% endfor %}
+
+</table>
+<form method="POST">{% csrf_token %}
+    <table>
+        <row>
+            <td><b>Localitate:</b></td>
+            <td><input type="text" id="localitate" name="localitate"></td>
+            <td><input type="submit" name="Afiseaza" value="Afiseaza"></td>
+        </row>
+    </table>
+</form>
+</body>
+</html>

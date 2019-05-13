@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>produs</title>
+</head>
+<body>
+<h1>Detalii produs:</h1>
+
+
+<table>
+{% for prod in products %}
+    <tr>
+        <td> <b>Tip:</b></td><td>{{prod.tip}}</td>
+    </tr>
+    <tr>
+        <td> <b>Denumire:</b></td><td>{{prod.nume}}</td>
+    </tr>
+    <tr>
+
+        <td> <b>Pret:</b></td> <td>{{prod.pret}}</td>
+    </tr>
+    <tr>
+        <td><b>Descriere:</b></td> <td>{{prod.descriere}}</td>
+    </tr>
+    <tr>
+
+        <td><b>Disponibilitate:</b></td>
+        <td>
+         {% if prod.disponibil %}
+              DISPONIBIL
+          {% else %}
+            INDISPONIBIL
+        {% endif %}
+
+        </td>
+
+    </tr>
+    <tr>
+         <td><b>Imagine:</b></td>
+         <td><img src="{{prod.imagine}}" alt="HTML5 Icon" style="width:128px;height:128px;"></td>
+        <td> {{prod.imagine}}</td>
+
+    </tr>
+ <tr>
+         <td><b>Imagine:</b></td>
+         <td><img src="Imagini/pluta1.jpg"  ></td>
+
+
+ </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

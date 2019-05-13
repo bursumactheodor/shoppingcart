@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Modifica student:</h1>
+<form  method="POST">{% csrf_token %}
+<table>
+
+    <tr>
+        <td> <b>Nume:</b></td><td><input type="text" name="nume" id="nume" value="{{stud.nume}}"> </td>
+    </tr>
+    <tr>
+         <td><b>Telefon:</b></td><td><input type="text" name="telefon" id="telefon" value="{{stud.telefon}}"> </td>
+    </tr>
+    <tr>
+
+         <td> <b>Bursa:</b></td><td><input type="text" name="bursa" id="bursa" value="{{stud.bursa}}"> </td>
+    </tr>
+    <tr>
+         <td> <b>Localitate:</b></td><td><input type="text" name="localitate" id="localitate" value="{{stud.localitate}}"> </td>
+    </tr>
+    <tr>
+        <td><input type ="submit" name="modifica" value="Modifica"></td>
+    </tr>
+
+
+</table>
+
+</form>
+</body>
+</html>
