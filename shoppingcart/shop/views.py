@@ -3,12 +3,22 @@ from django.shortcuts import redirect
 from django.http import HttpResponse
 from .models import Produs
 from .models import Prodselectat
+from  .models import Tip
 
 
 
 def home(request):
      return render(request,"shop/home.html")
 
+
+def tip_list(request):
+     obiecte = Tip.objects.all()
+     return render(request, "shop/tipuri.html", {'products': obiecte})
+
+
+def prod_tip_list(request,idp):
+     obiecte = Produs.objects.all().filter(tip=idp)
+     return render(request, "shop/produsedintip.html", {'products': obiecte})
 
 def product_list(request):
      obiecte = Produs.objects.all()

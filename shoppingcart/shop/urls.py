@@ -12,6 +12,8 @@ urlpatterns = [
     path('produse/produs/<int:idp>', views.product_detalii, name="product-detalii"),
     path('produse/select/<int:idp>', views.product_select, name="product-select"),
     path('produse/select/del/<int:ids>', views.stergeselectie, name="sterge-selectie"),
+    path('tip/', views.tip_list, name="tipuri"),
+    path('tip/ptip/<int:idp>', views.prod_tip_list, name="prod-din-tipuri"),
 
 
 
