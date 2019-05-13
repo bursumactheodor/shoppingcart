@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tipuri</title>
+</head>
+<body>
+<h1>Categorii</h1>
+<table>
+    <tr>
+        <th>Id</th>
+         <th>Nume</th>
+         <th></th>
+    </tr>
+
+{% for product in products %}
+    <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.nume}}</td>
+        <td> <a href="ptip/{{product.id}}" > Afiseaza </a></td>
+    </tr>
+{% endfor %}
+
+</table>
+</body>
+</html>
